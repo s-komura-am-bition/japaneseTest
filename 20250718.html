@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N5レベル日本語読み問題</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .question-block {
+            background-color: #e8f5e9;
+            border-left: 5px solid #4CAF50;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            position: relative;
+        }
+        .question-block h3 {
+            color: #2e7d32;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+        .question-block ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+        .question-block ul li {
+            background-color: #ffffff;
+            border: 1px solid #dcdcdc;
+            margin-bottom: 10px;
+            padding: 12px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .question-block ul li:hover {
+            background-color: #f0f0f0;
+            border-color: #b0b0b0;
+        }
+        .question-block ul li.correct {
+            background-color: #d4edda;
+            border-color: #28a745;
+            font-weight: bold;
+        }
+        .question-block ul li.incorrect {
+            background-color: #f8d7da;
+            border-color: #dc3545;
+        }
+        .rationale {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f0f7f9;
+            border-left: 3px solid #2196F3;
+            font-size: 0.9em;
+            color: #555;
+            display: none; /* Hidden by default */
+            border-radius: 5px;
+        }
+        .hint {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #fff3cd;
+            border-left: 3px solid #ffc107;
+            font-size: 0.9em;
+            color: #664d03;
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            margin: 20px auto 0;
+            padding: 12px 25px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.85em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>N5レベル日本語読み問題</h1>
+
+        <div class="question-block">
+            <h3>問題 1</h3>
+            <p>私は東京に住んでいます。私は学生です。<br>質問：私はどこに住んでいますか？</p>
+            <ul>
+                <li data-correct="true" data-rationale="正しいです。本文に「私は東京に住んでいます。」とあります。">東京に住んでいます。</li>
+                <li data-correct="false" data-rationale="本文に大阪に住んでいるとは書かれていません。">大阪に住んでいます。</li>
+                <li data-correct="false" data-rationale="本文に京都に住んでいるとは書かれていません。">京都に住んでいます。</li>
+                <li data-correct="false" data-rationale="本文に横浜に住んでいるとは書かれていません。">横浜に住んでいます。</li>
+            </ul>
+            <div class="rationale"></div>
+            <div class="hint">「住んでいます」という言葉の前の単語を探してみましょう。</div>
+        </div>
+
+        <div class="question-block">
+            <h3>問題 2</h3>
+            <p>私は東京に住んでいます。私は学生です。<br>質問：私は何ですか？</p>
+            <ul>
+                <li data-correct="true" data-rationale="正しいです。本文に「私は学生です。」とあります。">学生です。</li>
+                <li data-correct="false" data-rationale="本文に会社員とは書かれていません。">会社員です。</li>
+                <li data-correct="false" data-rationale="本文に先生とは書かれていません。">先生です。</li>
+                <li data-correct="false" data-rationale="本文に医者とは書かれていません。">医者です。</li>
+            </ul>
+            <div class="rationale"></div>
+            <div class="hint">「私は〜です」という文の「〜」の部分に注目しましょう。</div>
+        </div>
+
+        <div class="question-block">
+            <h3>問題 3</h3>
+            <p>私は毎日日本語を勉強します。<br>質問：私は何をしますか？</p>
+            <ul>
+                <li data-correct="true" data-rationale="正しいです。本文に「毎日日本語を勉強します。」とあります。">毎日日本語を勉強します。</li>
+                <li data-correct="false" data-rationale="本文に英語を勉強するとは書かれていません。">毎日英語を勉強します。</li>
+                <li data-correct="false" data-rationale="本文に数学を勉強するとは書かれていません。">毎日数学を勉強します。</li>
+                <li data-correct="false" data-rationale="本文に歴史を勉強するとは書かれていません。">毎日歴史を勉強します。</li>
+            </ul>
+            <div class="rationale"></div>
+            <div class="hint">動詞の前の目的語に注目してください。</div>
+        </div>
+
+        <div class="question-block">
+            <h3>問題 4</h3>
+            <p>週末は映画を見ます。<br>質問：週末に何をしますか？</p>
+            <ul>
+                <li data-correct="true" data-rationale="正しいです。本文に「週末は映画を見ます。」とあります。">映画を見ます。</li>
+                <li data-correct="false" data-rationale="本文に本を読むとは書かれていません。">本を読みます。</li>
+                <li data-correct="false" data-rationale="本文にサッカーをすると書かれていません。">サッカーをします。</li>
+                <li data-correct="false" data-rationale="本文に料理を作ると書かれていません。">料理を作ります。</li>
+            </ul>
+            <div class="rationale"></div>
+            <div class="hint">「週末」の後に来る動詞のフレーズに注目しましょう。</div>
+        </div>
+
+        <div class="question-block">
+            <h3>問題 5</h3>
+            <p>朝ごはんにパンを食べます。<br>質問：朝ごはんに何をしますか？</p>
+            <ul>
+                <li data-correct="true" data-rationale="正しいです。本文に「朝ごはんにパンを食べます。」とあります。">朝ごはんにパンを食べます。</li>
+                <li data-correct="false" data-rationale="本文にご飯を食べるとは書かれていません。">朝ごはんにご飯を食べます。</li>
+                <li data-correct="false" data-rationale="「朝ごはん」ではなく「昼ごはん」なので間違いです。">昼ごはんにパンを食べます。</li>
+                <li data-correct="false" data-rationale="「朝ごはん」ではなく「晩ごはん」なので間違いです。">晩ごはんにパンを食べます。</li>
+            </ul>
+            <div class="rationale"></div>
+            <div class="hint">食事の名前と食べるものに注目しましょう。</div>
+        </div>
+
+        <div class="question-block">
+            <h3>問題 6</h3>
+            <p>駅で友達と会います。<br>質問：どこで友達と会いますか？</p>
+            <ul>
+                <li data-correct="true" data-rationale="正しいです。本文に「駅で友達と会います。」とあります。">駅で友達と会います。</li>
+                <li data-correct="false" data-rationale="本文に学校で会うとは書かれていません。">学校で友達と会います。</li>
+                <li data-correct="false" data-rationale="本文に家で会うとは書かれていません。">家で友達と会います。</li>
+                <li data-correct="false" data-rationale="本文に公園で会うとは書かれていません。">公園で友達と会います。</li>
+            </ul>
+            <div class="rationale"></div>
+            <div class="hint">場所を示す助詞「で」の前の単語を探しましょう。</div>
+        </div>
+
+        <div class="question-block">
+            <h3>問題 7</h3>
+            <p>昨日、デパートに行きました。<br>質問：いつ、どこに行きましたか？</p>
+            <ul>
+                <li data-correct="true" data-rationale="正しいです。本文に「昨日、デパートに行きました。」とあります。">昨日、デパートに行きました。</li>
+                <li data-correct="false" data-rationale="本文に今日行ったとは書かれていません。">今日、デパートに行きました。</li>
+                <li data-correct="false" data-rationale="本文に明日行くとは書かれていません。">明日、デパートに行きます。</li>
+                <li data-correct="false" data-rationale="本文に一昨日行ったとは書かれていません。">一昨日、デパートに行きました。</li>
+            </ul>
+            <div class="rationale"></div>
+            <div class="hint">時間を示す言葉と場所を示す言葉の両方に注目しましょう。</div>
+        </div>
+
+        <div class="question-block">
+            <h3>問題 8</h3>
+            <p>私は猫が好きです。<br>質問：何が好きですか？</p>
+            <ul>
+                <li data-correct="true" data-rationale="正しいです。本文に「私は猫が好きです。」とあります。">猫が好きです。</li>
+                <li data-correct="false" data-rationale="本文に犬が好きとは書かれていません。">犬が好きです。</li>
+                <li data-correct="false" data-rationale="本文に鳥が好きとは書かれていません。">鳥が好きです。</li>
+                <li data-correct="false" data-rationale="本文に魚が好きとは書かれていません。">魚が好きです。</li>
+            </ul>
+            <div class="rationale"></div>
+            <div class="hint">「〜が好きです」という表現の「〜」の部分に注目しましょう。</div>
+        </div>
+
+        <div class="question-block">
+            <h3>問題 9</h3>
+            <p>晩ごはんに日本料理を食べました。<br>質問：晩ごはんに何をしましたか？</p>
+            <ul>
+                <li data-correct="true" data-rationale="正しいです。本文に「晩ごはんに日本料理を食べました。」とあります。">日本料理を食べました。</li>
+                <li data-correct="false" data-rationale="本文に中華料理を食べるとは書かれていません。">中華料理を食べました。</li>
+                <li data-correct="false" data-rationale="本文にイタリア料理を食べるとは書かれていません。">イタリア料理を食べました。</li>
+                <li data-correct="false" data-rationale="本文に韓国料理を食べるとは書かれていません。">韓国料理を食べました。</li>
+            </ul>
+            <div class="rationale"></div>
+            <div class="hint">「晩ごはん」の後に続く行動に注目しましょう。</div>
+        </div>
+
+        <div class="question-block">
+            <h3>問題 10</h3>
+            <p>この本は面白いです。<br>質問：この本はどうですか？</p>
+            <ul>
+                <li data-correct="true" data-rationale="正しいです。本文に「この本は面白いです。」とあります。">この本は面白いです。</li>
+                <li data-correct="false" data-rationale="本文につまらないとは書かれていません。">この本はつまらないです。</li>
+                <li data-correct="false" data-rationale="本文に難しいとは書かれていません。">この本は難しいです。</li>
+                <li data-correct="false" data-rationale="本文に簡単とは書かれていません。">この本は簡単です。</li>
+            </ul>
+            <div class="rationale"></div>
+            <div class="hint">本の状態や特徴を表す形容詞を探しましょう。</div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2023 日本語学習クイズ</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.question-block ul li').forEach(item => {
+            item.addEventListener('click', event => {
+                const clickedItem = event.target;
+                const parentUl = clickedItem.closest('ul');
+                const rationaleDiv = clickedItem.closest('.question-block').querySelector('.rationale');
+
+                // Reset previous selections and hide rationales for this question
+                parentUl.querySelectorAll('li').forEach(li => {
+                    li.classList.remove('correct', 'incorrect');
+                });
+                rationaleDiv.style.display = 'block';
+
+                if (clickedItem.dataset.correct === 'true') {
+                    clickedItem.classList.add('correct');
+                    rationaleDiv.textContent = '正解です！ ' + clickedItem.dataset.rationale;
+                    rationaleDiv.style.backgroundColor = '#d4edda';
+                    rationaleDiv.style.borderColor = '#28a745';
+                } else {
+                    clickedItem.classList.add('incorrect');
+                    const correctAnswer = parentUl.querySelector('li[data-correct="true"]');
+                    rationaleDiv.textContent = '不正解です。' + (clickedItem.dataset.rationale ? ' ' + clickedItem.dataset.rationale : '') + ' 正解は: ' + correctAnswer.textContent + ' (' + correctAnswer.dataset.rationale + ')';
+                    rationaleDiv.style.backgroundColor = '#f8d7da';
+                    rationaleDiv.style.borderColor = '#dc3545';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
