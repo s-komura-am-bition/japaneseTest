@@ -3,276 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>N5レベル日本語読み問題</title>
+    <title>N4レベル読解練習問題</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 20px;
-            background-color: #f4f7f6;
+            font-family: 'Helvetica Neue', 'Arial', 'Hiragino Sans', 'Meiryo', sans-serif;
+            line-height: 1.8;
             color: #333;
-            line-height: 1.6;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
         }
         .container {
             max-width: 800px;
-            margin: 20px auto;
-            background-color: #ffffff;
-            padding: 30px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px 40px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         h1 {
-            color: #2c3e50;
             text-align: center;
-            margin-bottom: 30px;
+            color: #4a4a4a;
+            border-bottom: 2px solid #6c757d;
+            padding-bottom: 10px;
         }
-        .question-block {
-            background-color: #e8f5e9;
-            border-left: 5px solid #4CAF50;
-            padding: 20px;
-            margin-bottom: 25px;
-            border-radius: 8px;
-            position: relative;
+        h2 {
+            font-size: 1.4em;
+            color: #0056b3;
+            border-left: 5px solid #0056b3;
+            padding-left: 10px;
+            margin-top: 40px;
         }
-        .question-block h3 {
-            color: #2e7d32;
-            margin-top: 0;
-            font-size: 1.2em;
+        .passage {
+            background-color: #e9ecef;
+            border: 1px solid #ced4da;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
         }
-        .question-block ul {
-            list-style: none;
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
             padding: 0;
-            margin-top: 15px;
         }
-        .question-block ul li {
-            background-color: #ffffff;
-            border: 1px solid #dcdcdc;
+        li {
             margin-bottom: 10px;
-            padding: 12px 15px;
+        }
+        label {
+            display: block;
+            padding: 10px;
+            border: 1px solid #ddd;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
+            transition: background-color 0.3s, border-color 0.3s;
         }
-        .question-block ul li:hover {
-            background-color: #f0f0f0;
-            border-color: #b0b0b0;
+        input[type="radio"] {
+            margin-right: 10px;
         }
-        .question-block ul li.correct {
-            background-color: #d4edda;
-            border-color: #28a745;
-            font-weight: bold;
+        label:hover {
+            background-color: #f8f9fa;
         }
-        .question-block ul li.incorrect {
-            background-color: #f8d7da;
-            border-color: #dc3545;
-        }
-        .rationale {
-            margin-top: 10px;
-            padding: 10px;
-            background-color: #f0f7f9;
-            border-left: 3px solid #2196F3;
-            font-size: 0.9em;
-            color: #555;
-            display: none; /* Hidden by default */
-            border-radius: 5px;
-        }
-        .hint {
-            margin-top: 15px;
-            padding: 10px;
-            background-color: #fff3cd;
-            border-left: 3px solid #ffc107;
-            font-size: 0.9em;
-            color: #664d03;
-            border-radius: 5px;
-        }
-        button {
+        .check-button {
             display: block;
-            margin: 20px auto 0;
-            padding: 12px 25px;
-            font-size: 1em;
+            width: 200px;
+            margin: 40px auto;
+            padding: 12px 15px;
+            font-size: 1.2em;
+            font-weight: bold;
             color: #fff;
-            background-color: #007bff;
+            background-color: #28a745;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s;
         }
-        button:hover {
-            background-color: #0056b3;
+        .check-button:hover {
+            background-color: #218838;
         }
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 0.85em;
-            color: #777;
+        /* --- Answer styles --- */
+        .correct-answer {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+        .incorrect-answer {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+        .correct-mark::after {
+            content: '  ✔ 正解';
+            font-weight: bold;
+            color: #155724;
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1>N5レベル日本語読み問題</h1>
+        <h1>N4レベル読解練習問題（漢字多め）</h1>
 
-        <div class="question-block">
-            <h3>問題 1</h3>
-            <p>私は東京に住んでいます。私は学生です。<br>質問：私はどこに住んでいますか？</p>
+        <div class="question-block" id="q1">
+            <h2>問題１</h2>
+            <p class="passage">私は田中です。明日、図書館へ行きます。先週借りた本を返します。それから、新しい料理の本を探すつもりです。図書館の近くに新しい映画館ができたので、映画を見てから帰るつもりです。</p>
+            <p class="question-text">田中さんの明日の予定について、正しいものをえらんでください。</p>
             <ul>
-                <li data-correct="true" data-rationale="正しいです。本文に「私は東京に住んでいます。」とあります。">東京に住んでいます。</li>
-                <li data-correct="false" data-rationale="本文に大阪に住んでいるとは書かれていません。">大阪に住んでいます。</li>
-                <li data-correct="false" data-rationale="本文に京都に住んでいるとは書かれていません。">京都に住んでいます。</li>
-                <li data-correct="false" data-rationale="本文に横浜に住んでいるとは書かれていません。">横浜に住んでいます。</li>
+                <li><label><input type="radio" name="q1" value="1"> 田中さんは、明日図書館で勉強します。</label></li>
+                <li><label><input type="radio" name="q1" value="2"> 田中さんは、図書館で本を５冊借りました。</label></li>
+                <li><label><input type="radio" name="q1" value="3"> 田中さんは、明日図書館に行った後、映画を見ます。</label></li>
+                <li><label><input type="radio" name="q1" value="4"> 田中さんは、映画館で友達に会います。</label></li>
             </ul>
-            <div class="rationale"></div>
-            <div class="hint">「住んでいます」という言葉の前の単語を探してみましょう。</div>
         </div>
 
-        <div class="question-block">
-            <h3>問題 2</h3>
-            <p>私は東京に住んでいます。私は学生です。<br>質問：私は何ですか？</p>
+        <div class="question-block" id="q2">
+            <h2>問題２</h2>
+            <p class="passage">アルバイト募集！駅前のコンビニです。仕事は、店の掃除や商品の陳列など。週に３日、１日５時間程度。時給は１２００円。交通費も全額支給します。元気な方、連絡をお待ちしています。</p>
+            <p class="question-text">コンビニのアルバイト募集の広告です。内容と合っているものをえらんでください。</p>
             <ul>
-                <li data-correct="true" data-rationale="正しいです。本文に「私は学生です。」とあります。">学生です。</li>
-                <li data-correct="false" data-rationale="本文に会社員とは書かれていません。">会社員です。</li>
-                <li data-correct="false" data-rationale="本文に先生とは書かれていません。">先生です。</li>
-                <li data-correct="false" data-rationale="本文に医者とは書かれていません。">医者です。</li>
+                <li><label><input type="radio" name="q2" value="1"> このアルバイトは、毎日５時間働かなければなりません。</label></li>
+                <li><label><input type="radio" name="q2" value="2"> このアルバイトは、レストランの仕事です。</label></li>
+                <li><label><input type="radio" name="q2" value="3"> このアルバイトは、時給が１２００円です。</label></li>
+                <li><label><input type="radio" name="q2" value="4"> このアルバイトは、交通費がもらえません。</label></li>
             </ul>
-            <div class="rationale"></div>
-            <div class="hint">「私は〜です」という文の「〜」の部分に注目しましょう。</div>
         </div>
 
-        <div class="question-block">
-            <h3>問題 3</h3>
-            <p>私は毎日日本語を勉強します。<br>質問：私は何をしますか？</p>
+        <div class="question-block" id="q3">
+            <h2>問題３</h2>
+            <p class="passage">来月の連休に、一緒に京都へ行きませんか。私は、京都の有名な寺や神社を見てみたいです。新しいカメラも買ったので、きれいな写真をたくさん撮りたいです。おいしいものも食べたいですね。返事を待っています。</p>
+            <p class="question-text">山田さんから友達へのメールです。山田さんはどうして京都へ行きたいですか。</p>
             <ul>
-                <li data-correct="true" data-rationale="正しいです。本文に「毎日日本語を勉強します。」とあります。">毎日日本語を勉強します。</li>
-                <li data-correct="false" data-rationale="本文に英語を勉強するとは書かれていません。">毎日英語を勉強します。</li>
-                <li data-correct="false" data-rationale="本文に数学を勉強するとは書かれていません。">毎日数学を勉強します。</li>
-                <li data-correct="false" data-rationale="本文に歴史を勉強するとは書かれていません。">毎日歴史を勉強します。</li>
+                <li><label><input type="radio" name="q3" value="1"> 新しいカメラの写真を撮るため。</label></li>
+                <li><label><input type="radio" name="q3" value="2"> 有名な寺や神社を見るため。</label></li>
+                <li><label><input type="radio" name="q3" value="3"> 友達に会いに行くため。</label></li>
+                <li><label><input type="radio" name="q3" value="4"> おいしい料理を食べるため。</label></li>
             </ul>
-            <div class="rationale"></div>
-            <div class="hint">動詞の前の目的語に注目してください。</div>
         </div>
 
-        <div class="question-block">
-            <h3>問題 4</h3>
-            <p>週末は映画を見ます。<br>質問：週末に何をしますか？</p>
+        <div class="question-block" id="q4">
+            <h2>問題４</h2>
+            <p class="passage">肉と野菜の炒め物<br>１．まず、フライパンに油を熱し、肉を炒める。<br>２．肉の色が変わったら、野菜を入れて軽く炒める。<br>３．その後、水１００ｃｃと調味料（醤油、砂糖）を全部入れる。<br>４．弱火で１０分煮たら、出来上がり。</p>
+            <p class="question-text">新しい料理の作り方のメモです。正しい順番をえらんでください。</p>
             <ul>
-                <li data-correct="true" data-rationale="正しいです。本文に「週末は映画を見ます。」とあります。">映画を見ます。</li>
-                <li data-correct="false" data-rationale="本文に本を読むとは書かれていません。">本を読みます。</li>
-                <li data-correct="false" data-rationale="本文にサッカーをすると書かれていません。">サッカーをします。</li>
-                <li data-correct="false" data-rationale="本文に料理を作ると書かれていません。">料理を作ります。</li>
+                <li><label><input type="radio" name="q4" value="1"> 肉と野菜を最初に炒める。</label></li>
+                <li><label><input type="radio" name="q4" value="2"> 野菜を入れてから、水と調味料を入れる。</label></li>
+                <li><label><input type="radio" name="q4" value="3"> 調味料は、水より先に入れる。</label></li>
+                <li><label><input type="radio" name="q4" value="4"> 全部で１５分煮る。</label></li>
             </ul>
-            <div class="rationale"></div>
-            <div class="hint">「週末」の後に来る動詞のフレーズに注目しましょう。</div>
         </div>
 
-        <div class="question-block">
-            <h3>問題 5</h3>
-            <p>朝ごはんにパンを食べます。<br>質問：朝ごはんに何をしますか？</p>
+        <div class="question-block" id="q5">
+            <h2>問題５</h2>
+            <p class="passage">お元気ですか。日本へ来てから３か月が経ちました。まだ慣れないことも多いですが、毎日楽しいです。大学の勉強は少し難しいですが、友達が助けてくれます。先週末は、その友達と箱根へ旅行に行きました。温泉に入ったり、景色を見たりして、とても良い思い出ができました。心配しないでくださいね。</p>
+            <p class="question-text">マリアさんからの手紙です。マリアさんが一番伝えたいことは何ですか。</p>
             <ul>
-                <li data-correct="true" data-rationale="正しいです。本文に「朝ごはんにパンを食べます。」とあります。">朝ごはんにパンを食べます。</li>
-                <li data-correct="false" data-rationale="本文にご飯を食べるとは書かれていません。">朝ごはんにご飯を食べます。</li>
-                <li data-correct="false" data-rationale="「朝ごはん」ではなく「昼ごはん」なので間違いです。">昼ごはんにパンを食べます。</li>
-                <li data-correct="false" data-rationale="「朝ごはん」ではなく「晩ごはん」なので間違いです。">晩ごはんにパンを食べます。</li>
+                <li><label><input type="radio" name="q5" value="1"> 日本の生活に慣れたこと。</label></li>
+                <li><label><input type="radio" name="q5" value="2"> 大学の勉強が大変なこと。</label></li>
+                <li><label><input type="radio" name="q5" value="3"> 週末に旅行に行ったこと。</label></li>
+                <li><label><input type="radio" name="q5" value="4"> 日本で元気に楽しく過ごしていること。</label></li>
             </ul>
-            <div class="rationale"></div>
-            <div class="hint">食事の名前と食べるものに注目しましょう。</div>
         </div>
 
-        <div class="question-block">
-            <h3>問題 6</h3>
-            <p>駅で友達と会います。<br>質問：どこで友達と会いますか？</p>
+        <div class="question-block" id="q6">
+            <h2>問題６</h2>
+            <p class="passage">お客様へのお知らせ<br>本日、線路の安全確認のため、午後２時から午後３時までの間、新宿駅と渋谷駅の間で電車の運転を見合わせます。ご迷惑をおかけしますが、ご理解とご協力をお願いいたします。</p>
+            <p class="question-text">駅のホームにあるお知らせです。最も大切なことは何ですか。</p>
             <ul>
-                <li data-correct="true" data-rationale="正しいです。本文に「駅で友達と会います。」とあります。">駅で友達と会います。</li>
-                <li data-correct="false" data-rationale="本文に学校で会うとは書かれていません。">学校で友達と会います。</li>
-                <li data-correct="false" data-rationale="本文に家で会うとは書かれていません。">家で友達と会います。</li>
-                <li data-correct="false" data-rationale="本文に公園で会うとは書かれていません。">公園で友達と会います。</li>
+                <li><label><input type="radio" name="q6" value="1"> 電車が全部止まること。</label></li>
+                <li><label><input type="radio" name="q6" value="2"> バスが無料で利用できること。</label></li>
+                <li><label><input type="radio" name="q6" value="3"> 電車の運転が一時的に止まる時間帯があること。</label></li>
+                <li><label><input type="radio" name="q6" value="4"> 駅の工事が明日終わること。</label></li>
             </ul>
-            <div class="rationale"></div>
-            <div class="hint">場所を示す助詞「で」の前の単語を探しましょう。</div>
         </div>
 
-        <div class="question-block">
-            <h3>問題 7</h3>
-            <p>昨日、デパートに行きました。<br>質問：いつ、どこに行きましたか？</p>
+        <div class="question-block" id="q7">
+            <h2>問題７</h2>
+            <p class="passage">学生の皆さんへ<br>来週の授業から、新しい教科書を使います。来週の授業までに、大学の事務所で新しい教科書を受け取ってください。教科書の代金は必要ありません。それでは、授業で会いましょう。</p>
+            <p class="question-text">先生から学生への連絡メールです。学生がしなければならないことは何ですか。</p>
             <ul>
-                <li data-correct="true" data-rationale="正しいです。本文に「昨日、デパートに行きました。」とあります。">昨日、デパートに行きました。</li>
-                <li data-correct="false" data-rationale="本文に今日行ったとは書かれていません。">今日、デパートに行きました。</li>
-                <li data-correct="false" data-rationale="本文に明日行くとは書かれていません。">明日、デパートに行きます。</li>
-                <li data-correct="false" data-rationale="本文に一昨日行ったとは書かれていません。">一昨日、デパートに行きました。</li>
+                <li><label><input type="radio" name="q7" value="1"> 来週までに事務所で本を受け取ること。</label></li>
+                <li><label><input type="radio" name="q7" value="2"> 来週の授業を休むこと。</label></li>
+                <li><label><input type="radio" name="q7" value="3"> 先生にメールで返信すること。</label></li>
+                <li><label><input type="radio" name="q7" value="4"> 事務所で授業料を払うこと。</label></li>
             </ul>
-            <div class="rationale"></div>
-            <div class="hint">時間を示す言葉と場所を示す言葉の両方に注目しましょう。</div>
         </div>
 
-        <div class="question-block">
-            <h3>問題 8</h3>
-            <p>私は猫が好きです。<br>質問：何が好きですか？</p>
+        <div class="question-block" id="q8">
+            <h2>問題８</h2>
+            <p class="passage">１０月５日（土）曇りのち雨<br>今日は友達と公園でサッカーをする約束だった。でも、昼過ぎから急に雨が降り出したので、結局サッカーは中止になった。残念だったが、代わりに友達の家で映画を見た。とても面白かった。明日は晴れるといいな。</p>
+            <p class="question-text">今日の日記です。内容と合っているものをえらんでください。</p>
             <ul>
-                <li data-correct="true" data-rationale="正しいです。本文に「私は猫が好きです。」とあります。">猫が好きです。</li>
-                <li data-correct="false" data-rationale="本文に犬が好きとは書かれていません。">犬が好きです。</li>
-                <li data-correct="false" data-rationale="本文に鳥が好きとは書かれていません。">鳥が好きです。</li>
-                <li data-correct="false" data-rationale="本文に魚が好きとは書かれていません。">魚が好きです。</li>
+                <li><label><input type="radio" name="q8" value="1"> 今日は一日中、雨が降っていた。</label></li>
+                <li><label><input type="radio" name="q8" value="2"> 友達と公園で遊ぶ約束をしていた。</label></li>
+                <li><label><input type="radio" name="q8" value="3"> 雨が降ったので、サッカーができた。</label></li>
+                <li><label><input type="radio" name="q8" value="4"> 明日、友達の家で映画を見る。</label></li>
             </ul>
-            <div class="rationale"></div>
-            <div class="hint">「〜が好きです」という表現の「〜」の部分に注目しましょう。</div>
         </div>
 
-        <div class="question-block">
-            <h3>問題 9</h3>
-            <p>晩ごはんに日本料理を食べました。<br>質問：晩ごはんに何をしましたか？</p>
+        <div class="question-block" id="q9">
+            <h2>問題９</h2>
+            <p class="passage">お知らせ<br>来月１日、駅前に新しいパン屋『やまねこベーカリー』がオープンします。毎日、焼きたてのパンをご用意してお待ちしております。開店の日、パンを買った方に、コーヒーを一杯サービスします。ぜひお越しください。</p>
+            <p class="question-text">新しいパン屋の開店を知らせる広告です。正しいものをえらんでください。</p>
             <ul>
-                <li data-correct="true" data-rationale="正しいです。本文に「晩ごはんに日本料理を食べました。」とあります。">日本料理を食べました。</li>
-                <li data-correct="false" data-rationale="本文に中華料理を食べるとは書かれていません。">中華料理を食べました。</li>
-                <li data-correct="false" data-rationale="本文にイタリア料理を食べるとは書かれていません。">イタリア料理を食べました。</li>
-                <li data-correct="false" data-rationale="本文に韓国料理を食べるとは書かれていません。">韓国料理を食べました。</li>
+                <li><label><input type="radio" name="q9" value="1"> この店は駅から遠い。</label></li>
+                <li><label><input type="radio" name="q9" value="2"> 来月、新しいパン屋が開店する。</label></li>
+                <li><label><input type="radio" name="q9" value="3"> 開店の日に、パンが安くなる。</label></li>
+                <li><label><input type="radio" name="q9" value="4"> この店ではコーヒーは売っていない。</label></li>
             </ul>
-            <div class="rationale"></div>
-            <div class="hint">「晩ごはん」の後に続く行動に注目しましょう。</div>
         </div>
 
-        <div class="question-block">
-            <h3>問題 10</h3>
-            <p>この本は面白いです。<br>質問：この本はどうですか？</p>
+        <div class="question-block" id="q10">
+            <h2>問題１０</h2>
+            <p class="passage">上野動物園の人気者、ジャイアントパンダに昨日、かわいい赤ちゃんが生まれました。母子ともに健康だということです。赤ちゃんの名前はまだ決まっていません。公開は来月からを予定しています。</p>
+            <p class="question-text">短いニュースです。このニュースの内容は何ですか。</p>
             <ul>
-                <li data-correct="true" data-rationale="正しいです。本文に「この本は面白いです。」とあります。">この本は面白いです。</li>
-                <li data-correct="false" data-rationale="本文につまらないとは書かれていません。">この本はつまらないです。</li>
-                <li data-correct="false" data-rationale="本文に難しいとは書かれていません。">この本は難しいです。</li>
-                <li data-correct="false" data-rationale="本文に簡単とは書かれていません。">この本は簡単です。</li>
+                <li><label><input type="radio" name="q10" value="1"> 動物園のパンダが、昨日死んだ。</label></li>
+                <li><label><input type="radio" name="q10" value="2"> 上野動物園でパンダの赤ちゃんが生まれた。</label></li>
+                <li><label><input type="radio" name="q10" value="3"> パンダの赤ちゃんの名前が決まった。</label></li>
+                <li><label><input type="radio" name="q10" value="4"> 来週からパンダの赤ちゃんを見ることができる。</label></li>
             </ul>
-            <div class="rationale"></div>
-            <div class="hint">本の状態や特徴を表す形容詞を探しましょう。</div>
         </div>
 
-        <div class="footer">
-            <p>&copy; 2023 日本語学習クイズ</p>
-        </div>
+        <button class="check-button" onclick="checkAnswers()">答え合わせ</button>
+
     </div>
 
     <script>
-        document.querySelectorAll('.question-block ul li').forEach(item => {
-            item.addEventListener('click', event => {
-                const clickedItem = event.target;
-                const parentUl = clickedItem.closest('ul');
-                const rationaleDiv = clickedItem.closest('.question-block').querySelector('.rationale');
+        function checkAnswers() {
+            const correctAnswers = {
+                q1: '3',
+                q2: '3',
+                q3: '2',
+                q4: '2',
+                q5: '4',
+                q6: '3',
+                q7: '1',
+                q8: '2',
+                q9: '2',
+                q10: '2'
+            };
 
-                // Reset previous selections and hide rationales for this question
-                parentUl.querySelectorAll('li').forEach(li => {
-                    li.classList.remove('correct', 'incorrect');
+            for (const qId in correctAnswers) {
+                const questionBlock = document.getElementById(qId);
+                const options = questionBlock.querySelectorAll(`input[name="${qId}"]`);
+                const correctAnswerValue = correctAnswers[qId];
+
+                options.forEach(option => {
+                    const label = option.parentElement;
+                    
+                    // Reset previous styles
+                    label.classList.remove('correct-answer', 'incorrect-answer', 'correct-mark');
+                    
+                    if (option.checked) {
+                        if (option.value === correctAnswerValue) {
+                            label.classList.add('correct-answer');
+                        } else {
+                            label.classList.add('incorrect-answer');
+                        }
+                    }
+                    
+                    // Mark the correct answer
+                    if (option.value === correctAnswerValue) {
+                         label.classList.add('correct-mark');
+                    }
                 });
-                rationaleDiv.style.display = 'block';
-
-                if (clickedItem.dataset.correct === 'true') {
-                    clickedItem.classList.add('correct');
-                    rationaleDiv.textContent = '正解です！ ' + clickedItem.dataset.rationale;
-                    rationaleDiv.style.backgroundColor = '#d4edda';
-                    rationaleDiv.style.borderColor = '#28a745';
-                } else {
-                    clickedItem.classList.add('incorrect');
-                    const correctAnswer = parentUl.querySelector('li[data-correct="true"]');
-                    rationaleDiv.textContent = '不正解です。' + (clickedItem.dataset.rationale ? ' ' + clickedItem.dataset.rationale : '') + ' 正解は: ' + correctAnswer.textContent + ' (' + correctAnswer.dataset.rationale + ')';
-                    rationaleDiv.style.backgroundColor = '#f8d7da';
-                    rationaleDiv.style.borderColor = '#dc3545';
-                }
-            });
-        });
+            }
+        }
     </script>
+
 </body>
 </html>
