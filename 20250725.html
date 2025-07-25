@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オフィス日本語 N4レベル 読解問題</title>
+    <style>
+        body {
+            font-family: 'Meiryo', 'メイリオ', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4a4a4a;
+            border-bottom: 3px solid #6c63ff;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        .question-block {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .question-block h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+            color: #6c63ff;
+        }
+        .passage {
+            background-color: #eef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            white-space: pre-wrap; /* 改行をそのまま表示 */
+        }
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .options ol {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .options li {
+            background-color: #fff;
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .options li:hover {
+            background-color: #f0f0ff;
+            border-color: #6c63ff;
+        }
+        .answer-btn {
+            background-color: #6c63ff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .answer-btn:hover {
+            background-color: #5750d6;
+        }
+        .answer {
+            display: none;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>オフィス日本語 N4レベル 読解問題</h1>
+
+        <div class="question-block">
+            <h2>問題 1</h2>
+            <div class="passage">
+<strong>＜メモ＞</strong>
+
+田中さんへ
+
+あしたの 10時からの 会議は、午後 2時に なりました。
+会議室は ３階のままです。
+よろしくおねがいします。
+
+山田
+            </div>
+            <p class="question-text">問題：会議は いつ ありますか。</p>
+            <div class="options">
+                <ol>
+                    <li>1. あしたの 午前 10時</li>
+                    <li>2. あしたの 午後 2時</li>
+                    <li>3. あさっての 午前 10時</li>
+                    <li>4. あさっての 午後 2時</li>
+                </ol>
+            </div>
+            <button class="answer-btn" onclick="toggleAnswer('answer1')">答えを見る</button>
+            <div id="answer1" class="answer">答え： 2. あしたの 午後 2時</div>
+        </div>
+
+        <div class="question-block">
+            <h2>問題 2</h2>
+            <div class="passage">
+<strong>＜メール＞</strong>
+
+件名：資料のお願い
+
+佐藤さん
+
+来週の 会議で 使う 資料を コピーして ください。
+資料は 私の つくえの 上に あります。
+コピーは 10部 おねがいします。
+
+鈴木
+            </div>
+            <p class="question-text">問題：鈴木さんは 佐藤さんに 何を お願いしましたか。</p>
+            <div class="options">
+                <ol>
+                    <li>1. 資料を 作ること</li>
+                    <li>2. 資料を 10部 コピーすること</li>
+                    <li>3. つくえの 上を そうじすること</li>
+                    <li>4. 来週の 会議に 出ること</li>
+                </ol>
+            </div>
+            <button class="answer-btn" onclick="toggleAnswer('answer2')">答えを見る</button>
+            <div id="answer2" class="answer">答え： 2. 資料を 10部 コピーすること</div>
+        </div>
+        
+        <div class="question-block">
+            <h2>問題 3</h2>
+            <div class="passage">
+<strong>＜会社のルール＞</strong>
+
+休憩室（きゅうけいしつ）を使うみなさんへ
+
+休憩室で ごはんを 食べたあとは、かならず つくえを きれいに してください。
+ゴミは ゴミ箱に すててください。
+自分の ものは わすれないように しましょう。
+            </div>
+            <p class="question-text">問題：休憩室で ごはんを 食べたあと、何を しなければなりませんか。</p>
+            <div class="options">
+                <ol>
+                    <li>1. すぐに 仕事に もどる</li>
+                    <li>2. つくえを きれいにする</li>
+                    <li>3. 自分の ものを おく</li>
+                    <li>4. ゴミを もって 帰る</li>
+                </ol>
+            </div>
+            <button class="answer-btn" onclick="toggleAnswer('answer3')">答えを見る</button>
+            <div id="answer3" class="answer">答え： 2. つくえを きれいにする</div>
+        </div>
+
+        <div class="question-block">
+            <h2>問題 4</h2>
+            <div class="passage">
+<strong>（電話の会話）</strong>
+
+A：「はい、ABCフーズです。」
+B：「もしもし、私、ミラーと もうします。いつも お世話に なっております。山本課長は いらっしゃいますか。」
+A：「すみません、山本は 今、他の 電話に 出ております。」
+B：「そうですか。では、また あとで かけます。」
+            </div>
+            <p class="question-text">問題：ミラーさんは なぜ 山本課長と 話せませんでしたか。</p>
+            <div class="options">
+                <ol>
+                    <li>1. 山本課長が 休みだったから</li>
+                    <li>2. 山本課長が 会議中だったから</li>
+                    <li>3. 山本課長が 他の 電話に 出ていたから</li>
+                    <li>4. ミラーさんが 電話を まちがえたから</li>
+                </ol>
+            </div>
+            <button class="answer-btn" onclick="toggleAnswer('answer4')">答えを見る</button>
+            <div id="answer4" class="answer">答え： 3. 山本課長が 他の 電話に 出ていたから</div>
+        </div>
+
+        <div class="question-block">
+            <h2>問題 5</h2>
+            <div class="passage">
+<strong>＜お知らせ＞</strong>
+
+社員のみなさんへ
+
+来週の 月曜日、会社の パソコンが 新しくなります。
+古い パソコンの 中の 大切な データは、金曜日までに USBメモリに 保存（ほぞん）して ください。
+            </div>
+            <p class="question-text">問題：金曜日までに 何を しなければなりませんか。</p>
+            <div class="options">
+                <ol>
+                    <li>1. 新しい パソコンを 買う</li>
+                    <li>2. データを USBメモリに 保存する</li>
+                    <li>3. 古い パソコンを すてる</li>
+                    <li>4. 月曜日に 会社を 休む</li>
+                </ol>
+            </div>
+            <button class="answer-btn" onclick="toggleAnswer('answer5')">答えを見る</button>
+            <div id="answer5" class="answer">答え： 2. データを USBメモリに 保存する</div>
+        </div>
+
+        <div class="question-block">
+            <h2>問題 6</h2>
+            <div class="passage">
+<strong>（オフィスの会話）</strong>
+
+A：「すみません、ちょっと いいですか。」
+B：「はい、何ですか。」
+A：「この エアコンの つけ方が わからないんですが…。」
+B：「ああ、その リモコンの 赤い ボタンを 押せば つきますよ。」
+A：「ありがとうございます。」
+            </div>
+            <p class="question-text">問題：Aさんは 何が わからなかったですか。</p>
+            <div class="options">
+                <ol>
+                    <li>1. リモコンの ばしょ</li>
+                    <li>2. エアコンの つけ方</li>
+                    <li>3. 赤い ボタンの いみ</li>
+                    <li>4. Bさんの なまえ</li>
+                </ol>
+            </div>
+            <button class="answer-btn" onclick="toggleAnswer('answer6')">答えを見る</button>
+            <div id="answer6" class="answer">答え： 2. エアコンの つけ方</div>
+        </div>
+
+        <div class="question-block">
+            <h2>問題 7</h2>
+            <div class="passage">
+<strong>＜メール＞</strong>
+
+件名：事務所の電気
+
+みなさん
+
+事務所を 最後に出る人は、かならず エアコンと 電気を けして ください。
+窓のかぎも 確認（かくにん）してください。
+ご協力（きょうりょく）ありがとうございます。
+            </div>
+            <p class="question-text">問題：最後に 事務所を 出る人が しなくてもいいことは どれですか。</p>
+            <div class="options">
+                <ol>
+                    <li>1. エアコンを けすこと</li>
+                    <li>2. 電気を けすこと</li>
+                    <li>3. 窓のかぎを しめること</li>
+                    <li>4. ドアの そうじを すること</li>
+                </ol>
+            </div>
+            <button class="answer-btn" onclick="toggleAnswer('answer7')">答えを見る</button>
+            <div id="answer7" class="answer">答え： 4. ドアの そうじを すること</div>
+        </div>
+
+        <div class="question-block">
+            <h2>問題 8</h2>
+            <div class="passage">
+<strong>＜メモ＞</strong>
+
+高橋さんへ
+
+今日、宅急便（たっきゅうびん）が ２つ とどきます。
+１つは 田中さんあて、もう１つは 会社あてのにもつです。
+私がいないあいだに とどいたら、受け取っておいてください。
+
+木村
+            </div>
+            <p class="question-text">問題：宅急便は だれあてに とどきますか。</p>
+            <div class="options">
+                <ol>
+                    <li>1. 高橋さんと 木村さん</li>
+                    <li>2. 高橋さんと 田中さん</li>
+                    <li>3. 田中さんと 会社</li>
+                    <li>4. 木村さんと 会社</li>
+                </ol>
+            </div>
+            <button class="answer-btn" onclick="toggleAnswer('answer8')">答えを見る</button>
+            <div id="answer8" class="answer">答え： 3. 田中さんと 会社</div>
+        </div>
+
+        <div class="question-block">
+            <h2>問題 9</h2>
+            <div class="passage">
+<strong>＜お知らせ＞</strong>
+
+あしたの 朝９時から １０時まで、事務所の 窓の そうじを します。
+そうじの人が 事務所の 中に 入りますから、びっくりしないで ください。
+ご迷惑（めいわく）を おかけしますが、よろしく お願いします。
+            </div>
+            <p class="question-text">問題：お知らせの 内容（ないよう）は 何ですか。</p>
+            <div class="options">
+                <ol>
+                    <li>1. 事務所の そうじの 時間</li>
+                    <li>2. 新しい そうじの 人の しょうかい</li>
+                    <li>3. 窓の しめ方</li>
+                    <li>4. 事務所の ルール</li>
+                </ol>
+            </div>
+            <button class="answer-btn" onclick="toggleAnswer('answer9')">答えを見る</button>
+            <div id="answer9" class="answer">答え： 1. 事務所の そうじの 時間</div>
+        </div>
+        
+        <div class="question-block">
+            <h2>問題 10</h2>
+            <div class="passage">
+<strong>（オフィスの会話）</strong>
+
+A：「加藤さん、コピー機の 紙が なくなりました。どこに ありますか。」
+B：「ああ、紙は そこの たなの 中に ありますよ。」
+A：「ありがとうございます。どの たなですか。」
+B：「ドアの いちばん 近い たなです。」
+            </div>
+            <p class="question-text">問題：コピー機の 紙は どこに ありますか。</p>
+            <div class="options">
+                <ol>
+                    <li>1. ドアの となり</li>
+                    <li>2. コピー機の 中</li>
+                    <li>3. ドアから いちばん とおい たな</li>
+                    <li>4. ドアに いちばん 近い たな</li>
+                </ol>
+            </div>
+            <button class="answer-btn" onclick="toggleAnswer('answer10')">答えを見る</button>
+            <div id="answer10" class="answer">答え： 4. ドアに いちばん 近い たな</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(id) {
+            const answerElement = document.getElementById(id);
+            if (answerElement.style.display === 'block') {
+                answerElement.style.display = 'none';
+            } else {
+                answerElement.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>
