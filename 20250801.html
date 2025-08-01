@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新生活に関するN4初級読解問題</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 15px;
+        }
+        .question-block {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        .question-text {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #34495e;
+            white-space: pre-wrap; /* Preserve line breaks in text */
+        }
+        .options label {
+            display: block;
+            margin-bottom: 12px;
+            padding: 10px 15px;
+            background-color: #e8f0fe;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border: 1px solid #c9dffc;
+        }
+        .options label:hover {
+            background-color: #d1e3ff;
+        }
+        .options input[type="radio"] {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .feedback {
+            margin-top: 15px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            display: none; /* Hidden by default */
+        }
+        .feedback.correct {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .feedback.incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .hint {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+            border-radius: 5px;
+            font-size: 0.85em;
+            display: none; /* Hidden by default */
+        }
+        .show-answer-btn, .show-hint-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-top: 10px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .show-answer-btn:hover, .show-hint-btn:hover {
+            background-color: #0056b3;
+        }
+        .submit-all-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+        .submit-all-btn:hover {
+            background-color: #218838;
+        }
+        #results {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2c3e50;
+            padding: 20px;
+            border: 2px dashed #a7a7a7;
+            border-radius: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>新生活に関するN4初級読解問題</h1>
+        <p>以下の文章を読んで、質問に答えましょう。</p>
+
+        <form id="quizForm">
+            <div class="question-block">
+                <div class="question-text">田中さんは来月から新しい会社で働きます。会社は駅から少し遠いですが、毎日自転車で通うつもりです。新しい会社で新しい仕事を始めるので、少し心配しています。しかし、新しい出会いも楽しみにしています。<br><br>質問：田中さんは何を使って会社に通いますか。</div>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> 電車</label>
+                    <label><input type="radio" name="q1" value="b"> バス</label>
+                    <label><input type="radio" name="q1" value="c"> 自転車</label>
+                    <label><input type="radio" name="q1" value="d"> 車</label>
+                </div>
+                <button type="button" class="show-hint-btn" onclick="toggleHint(1)">ヒントを見る</button>
+                <div class="hint" id="hint1">田中さんが毎日使う交通手段に注目しましょう。</div>
+                <div class="feedback" id="feedback1"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-text">山田さんは今年の春、大学に入学しました。新しい友達がたくさんできることを期待しています。でも、勉強が難しくなるかもしれないと少し不安に思っています。山田さんは毎日図書館で勉強する計画です。<br><br>質問：山田さんが不安に思っていることは何ですか。</div>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> 新しい友達ができるか</label>
+                    <label><input type="radio" name="q2" value="b"> 図書館で勉強できるか</label>
+                    <label><input type="radio" name="q2" value="c"> 勉強が難しくなること</label>
+                    <label><input type="radio" name="q2" value="d"> 大学に入学すること</label>
+                </div>
+                <button type="button" class="show-hint-btn" onclick="toggleHint(2)">ヒントを見る</button>
+                <div class="hint" id="hint2">本文の中で「不安」という言葉の後に続く内容を確認してください。</div>
+                <div class="feedback" id="feedback2"></div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-text">佐藤さんは先週、新しいアパートに引っ越しました。前のアパートより部屋が広くて、とても気に入っています。しかし、まだ近くのスーパーがどこにあるか分かりません。今週末にスーパーを探しに行く予定です。<br><br>質問：佐藤さんがまだ分かっていないことは何ですか。</div>
+                <div class="options">
+                    <label><input type
