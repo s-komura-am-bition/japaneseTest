@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本語N4レベル：表情の読解クイズ</title>
+    <style>
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            padding: 20px;
+        }
+        .quiz-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 700px;
+        }
+        h1 {
+            text-align: center;
+            color: #4a4a4a;
+            margin-bottom: 25px;
+        }
+        .question-block {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .question-block:last-child {
+            border-bottom: none;
+        }
+        .question-text {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            white-space: pre-wrap; /* 改行を反映させる */
+        }
+        .options-container .option {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .options-container .option:hover {
+            background-color: #f0f0f0;
+        }
+        .options-container input[type="radio"] {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        #results {
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-top: 25px;
+        }
+        /* 正解・不正解のスタイル */
+        .correct {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1>日本語N4レベル：表情の読解クイズ</h1>
+        <form id="quizForm">
+            <div class="question-block">
+                <p class="question-text">1. 田中さんは、ドアを開けたとき、とても驚いた顔をしていました。部屋の中に、昔の友達がいたからです。<br><br>質問：田中さんはどうして驚きましたか。</p>
+                <div class="options-container">
+                    <div class="option"><label><input type="radio" name="q1" value="0"> ドアがなかなか開かなかったから。</label></div>
+                    <div class="option"><label><input type="radio" name="q1" value="1"> 部屋に誰もいなかったから。</label></div>
+                    <div class="option"><label><input type="radio" name="q1" value="2"> 予期せぬ友達に会ったから。</label></div>
+                    <div class="option"><label><input type="radio" name="q1" value="3"> 部屋がとても汚かったから。</label></div>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <p class="question-text">2. 山田さんは、テストの結果を見て、悲しそうな顔になりました。思ったより点数が低かったのです。<br><br>質問：山田さんの表情はどうでしたか。</p>
+                <div class="options-container">
+                    <div class="option"><label><input type="radio" name="q2" value="0"> 嬉しそうな顔</label></div>
+                    <div class="option"><label><input type="radio" name="q2" value="1"> 悲しそうな顔</label></div>
+                    <div class="option"><label><input type="radio" name="q2" value="2"> 怒った顔</label></div>
+                    <div class="option"><label><input type="radio" name="q2" value="3"> 心配そうな顔</label></div>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <p class="question-text">3. 公園で、子どもたちが楽しそうに笑っています。その顔を見ていると、私も明るい気持ちになります。<br><br>質問：子どもたちの顔を見て、私はどう感じましたか。</p>
+                <div class="options-container">
+                    <div class="option"><label><input type="radio" name="q3" value="0"> うるさいと感じた。</label></div>
+                    <div class="option"><label><input type="radio" name="q3" value="1"> 悲しい気持ちになった。</label></div>
+                    <div class="option"><label><input type="radio" name="q3" value="2"> 明るい気持ちになった。</label></div>
+                    <div class="option"><label><input type="radio" name="q3" value="3"> 何も感じなかった。</label></div>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <p class="question-text">4. 母は、私が作ったケーキを一口食べて、にっこり笑った。「おいしい」と言ってくれた。<br><br>質問：母はなぜにっこり笑いましたか。</p>
+                <div class="options-container">
+                    <div class="option"><label><input type="radio" name="q4" value="0"> ケーキがまずかったから。</label></div>
+                    <div class="option"><label><input type="radio" name="q4" value="1"> ケーキがおいしかったから。</label></div>
+                    <div class="option"><label><input type="radio" name="q4" value="2"> お腹が空いていたから。</label></div>
+                    <div class="option"><label><input type="radio" name="q4" value="3"> 甘いものが嫌いだから。</label></div>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <p class="question-text">5. 弟は、大事にしていたおもちゃを壊されて、怒った顔で友達を見ていました。<br><br>質問：弟はどんな気持ちですか。</p>
+                <div class="options-container">
+                    <div class="option"><label><input type="radio" name="q5" value="0"> 楽しい</label></div>
+                    <div class="option"><label><input type="radio" name="q5" value="1"> 嬉しい</label></div>
+                    <div class="option"><label><input type="radio" name="q5" value="2"> 怒っている</label></div>
+                    <div class="option"><label><input type="radio" name="q5" value="3"> 悲しい</label></div>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <p class="question-text">6. 佐藤さんは、会議で自分の意見を言うとき、少し顔が赤くなりました。彼は恥ずかしがり屋なのです。<br><br>質問：佐藤さんの顔が赤くなったのはなぜですか。</p>
+                <div class="options-container">
+                    <div class="option"><label><input type="radio" name="q6" value="0"> 病気だから。</label></div>
+                    <div class="option"><label><input type="radio" name="q6" value="1"> 怒っているから。</label></div>
+                    <div class="option"><label><input type="radio" name="q6" value="2"> 部屋が暑いから。</label></div>
+                    <div class="option"><label><input type="radio" name="q6" value="3"> 恥ずかしかったから。</label></div>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <p class="question-text">7. 赤ちゃんは、お母さんの顔を見ると、安心したような表情になります。<br><br>質問：赤ちゃんはどんな表情になりますか。</p>
+                <div class="options-container">
+                    <div class="option"><label><input type="radio" name="q7" value="0"> 不安そうな表情</label></div>
+                    <div class="option"><label><input type="radio" name="q7" value="1"> 安心したような表情</label></div>
+                    <div class="option"><label><input type="radio" name="q7" value="2"> 眠そうな表情</label></div>
+                    <div class="option"><label><input type="radio" name="q7" value="3"> 驚いた表情</label></div>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <p class="question-text">8. 木村さんは、難しい顔をして、ずっとパソコンを見ています。仕事で何か問題があったのかもしれません。<br><br>質問：木村さんはなぜ「難しい顔」をしていますか。</p>
+                <div class="options-container">
+                    <div class="option"><label><input type="radio" name="q8" value="0"> おもしろい動画を見ているから。</label></div>
+                    <div class="option"><label><input type="radio" name="q8" value="1"> 仕事で問題が起きた可能性があるから。</label></div>
+                    <div class="option"><label><input type="radio" name="q8" value="2"> 疲れて眠いから。</label></div>
+                    <div class="option"><label><input type="radio" name="q8" value="3"> パソコンが壊れたから。</label></div>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <p class="question-text">9. 私の犬は、私が家に帰ると、いつも嬉しそうな顔で迎えてくれます。尻尾を振って、私の周りをまわります。<br><br>質問：犬はどんな顔で迎えてくれますか。</p>
+                <div class="options-container">
+                    <div class="option"><label><input type="radio" name="q9" value="0"> 悲しそうな顔</label></div>
+                    <div class="option"><label><input type="radio" name="q9" value="1"> 怒った顔</label></div>
+                    <div class="option"><label><input type="radio" name="q9" value="2"> 嬉しそうな顔</label></div>
+                    <div class="option"><label><input type="radio" name="q9" value="3"> 眠そうな顔</label></div>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <p class="question-text">10. 鈴木さんは、いつも笑顔で、周りの人を明るくします。でも、今日は少し暗い顔をしていました。何か心配なことでもあるのでしょうか。<br><br>質問：今日の鈴木さんはどうでしたか。</p>
+                <div class="options-container">
+                    <div class="option"><label><input type="radio" name="q10" value="0"> いつもと同じで、笑顔だった。</label></div>
+                    <div class="option"><label><input type="radio" name="q10" value="1"> いつもより明るい顔だった。</label></div>
+                    <div class="option"><label><input type="radio" name="q10" value="2"> 少し暗い顔で、心配事があるようだった。</label></div>
+                    <div class="option"><label><input type="radio" name="q10" value="3"> 怒っていた。</label></div>
+                </div>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="checkAnswers()">答え合わせをする</button>
+            <div id="results"></div>
+        </form>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            const correctAnswers = {
+                q1: '2',
+                q2: '1',
+                q3: '2',
+                q4: '1',
+                q5: '2',
+                q6: '3',
+                q7: '1',
+                q8: '1',
+                q9: '2',
+                q10: '2'
+            };
+
+            const form = document.getElementById('quizForm');
+            const questionCount = Object.keys(correctAnswers).length;
+            let score = 0;
+
+            for (let i = 1; i <= questionCount; i++) {
+                const questionName = 'q' + i;
+                const radios = form.elements[questionName];
+                const options = radios[0].closest('.options-container').children;
+
+                // Reset styles
+                for(let opt of options) {
+                    opt.classList.remove('correct', 'incorrect');
+                }
+
+                const selected = Array.from(radios).find(radio => radio.checked);
+                
+                if (selected) {
+                    const selectedLabel = selected.closest('.option');
+                    if (selected.value === correctAnswers[questionName]) {
+                        score++;
+                        selectedLabel.classList.add('correct');
+                    } else {
+                        selectedLabel.classList.add('incorrect');
+                        // Show the correct answer as well
+                        const correctRadio = Array.from(radios).find(radio => radio.value === correctAnswers[questionName]);
+                        if(correctRadio){
+                            correctRadio.closest('.option').classList.add('correct');
+                        }
+                    }
+                } else {
+                     // If no answer is selected, show the correct one
+                     const correctRadio = Array.from(radios).find(radio => radio.value === correctAnswers[questionName]);
+                     if(correctRadio){
+                        correctRadio.closest('.option').classList.add('correct');
+                     }
+                }
+            }
+
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `あなたのスコアは ${questionCount} 問中 ${score} 問正解です。`;
+            window.scrollTo(0, 0); // ページの一番上にスクロール
+        }
+    </script>
+
+</body>
+</html>
