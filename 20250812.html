@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本語N4読解クイズ - 休日</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', 'Arial', 'Hiragino Sans', 'Meiryo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #005ab3;
+        }
+        .quiz-container {
+            background-color: #fff;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .passage {
+            background-color: #eef7ff;
+            padding: 15px;
+            border-left: 5px solid #007bff;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .options li:hover {
+            background-color: #f0f0f0;
+        }
+        .feedback {
+            display: none;
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .correct {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+        .show-answer {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .show-answer:hover {
+            background-color: #0056b3;
+        }
+        .answer-text {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>日本語N4読解クイズ</h1>
+    <h2>テーマ：休日</h2>
+
+    <div class="quiz-container">
+        <h3>問題 1</h3>
+        <p class="passage">
+            田中さんの休みの日はいつも忙しいです。午前中、部屋の掃除をしたり、洗濯をしたりします。午後は図書館へ行って、本を借ります。夜は家でゆっくり映画を見ます。
+        </p>
+        <p class="question">田中さんは休みの日の午後に何をしますか。</p>
+        <ol class="options" type="A">
+            <li>映画を見ます。</li>
+            <li>掃除や洗濯をします。</li>
+            <li>図書館へ行きます。</li>
+            <li>仕事をします。</li>
+        </ol>
+        <button class="show-answer" onclick="showAnswer(this, 'C')">答えを見る</button>
+        <div class="answer-text">正解: C. 図書館へ行きます。<br>解説：「午後は図書館へ行って、本を借ります。」と書いてあります。</div>
+    </div>
+
+    <div class="quiz-container">
+        <h3>問題 2</h3>
+        <p class="passage">
+            きのうは休みでしたから、私は友だちと買い物に行きました。デパートで新しい服を買いました。それから、近くのカフェでお茶を飲みながら、たくさん話しました。とても楽しかったです。
+        </p>
+        <p class="question">この人はきのう誰と何をしましたか。</p>
+        <ol class="options" type="A">
+            <li>一人で服を買いに行きました。</li>
+            <li>友だちと買い物に行ってお茶を飲みました。</li>
+            <li>家族とデパートで食事をしました。</li>
+            <li>友だちと映画を見ました。</li>
+        </ol>
+        <button class="show-answer" onclick="showAnswer(this, 'B')">答えを見る</button>
+        <div class="answer-text">正解: B. 友だちと買い物に行ってお茶を飲みました。<br>解説：「友だちと買い物に行きました。」と「カフェでお茶を飲みながら、たくさん話しました。」と書いてあります。</div>
+    </div>
+
+    <div class="quiz-container">
+        <h3>問題 3</h3>
+        <p class="passage">
+            私の趣味は料理です。休みの日は、いつも新しい料理に挑戦します。先週はイタリア料理を作りましたが、今週は日本の料理、お寿司を作ってみようと思っています。家族みんなが楽しみにしています。
+        </p>
+        <p class="question">この人は今週の休みに何をしようと思っていますか。</p>
+        <ol class="options" type="A">
+            <li>イタリア料理を作ります。</li>
+            <li>レストランへ食べに行きます。</li>
+            <li>お寿司の作り方を勉強します。</li>
+            <li>お寿司を作ります。</li>
+        </ol>
+        <button class="show-answer" onclick="showAnswer(this, 'D')">答えを見る</button>
+        <div class="answer-text">正解: D. お寿司を作ります。<br>解説：「今週は日本の料理、お寿司を作ってみようと思っています。」と書いてあります。</div>
+    </div>
+
+    <div class="quiz-container">
+        <h3>問題 4</h3>
+        <p class="passage">
+            山田さんは休みの日にあまり外へ出ません。家で本を読んだり、音楽を聴いたりするのが好きです。でも、天気がいい日は、時々近くの公園を散歩します。
+        </p>
+        <p class="question">山田さんの休日の過ごし方で、正しいものはどれですか。</p>
+        <ol class="options" type="A">
+            <li>いつも家の中にいます。</li>
+            <li>天気がいい日は、よく買い物に行きます。</li>
+            <li>時々、天気がいい日に公園を散歩します。</li>
+            <li>毎週、公園で音楽を聴きます。</li>
+        </ol>
+        <button class="show-answer" onclick="showAnswer(this, 'C')">答えを見る</button>
+        <div class="answer-text">正解: C. 時々、天気がいい日に公園を散歩します。<br>解説：「天気がいい日は、時々近くの公園を散歩します。」と書いてあります。</div>
+    </div>
+
+    <div class="quiz-container">
+        <h3>問題 5</h3>
+        <p class="passage">
+            今度の土曜日は、会社の同僚と山に登りに行きます。朝早く起きて、電車で山の近くまで行きます。お弁当は自分で作って持っていきます。天気予報によると、晴れるそうなので、とても楽しみです。
+        </p>
+        <p class="question">この人は今度の土曜日に何をしますか。</p>
+        <ol class="options" type="A">
+            <li>一人で山に登ります。</li>
+            <li>会社の人と電車で山へ行きます。</li>
+            <li>山でレストランのお弁当を食べます。</li>
+            <li>雨でも山に登りに行きます。</li>
+        </ol>
+        <button class="show-answer" onclick="showAnswer(this, 'B')">答えを見る</button>
+        <div class="answer-text">正解: B. 会社の人と電車で山へ行きます。<br>解説：「会社の同僚と山に登りに行きます。」と「電車で山の近くまで行きます。」と書いてあります。</div>
+    </div>
+
+     <div class="quiz-container">
+        <h3>問題 6</h3>
+        <p class="passage">
+            李さんの休日はいつも同じです。朝はゆっくり寝て、昼ごろ起きます。それから、近くのジムへ行って、一時間ぐらい運動します。運動の後は、シャワーを浴びて、家でテレビを見ます。
+        </p>
+        <p class="question">李さんは休みの日に何をしますか。</p>
+        <ol class="options" type="A">
+            <li>朝早く起きて運動します。</li>
+            <li>ジムでシャワーを浴びます。</li>
+            <li>昼ごはんを食べてから運動します。</li>
+            <li>運動してから家でテレビを見ます。</li>
+        </ol>
+        <button class="show-answer" onclick="showAnswer(this, 'D')">答えを見る</button>
+        <div class="answer-text">正解: D. 運動してから家でテレビを見ます。<br>解説：「運動の後は、シャワーを浴びて、家でテレビを見ます。」と書いてあります。</div>
+    </div>
+
+    <div class="quiz-container">
+        <h3>問題 7</h3>
+        <p class="passage">
+            先週の日曜日、私は家族と海へ行きました。子どもたちは砂でお城を作ったり、海で泳いだりして、とても喜びました。私はパラソルの下で本を読んでいましたが、とても静かでよかったです。
+        </p>
+        <p class="question">この人は海で何をしましたか。</p>
+        <ol class="options" type="A">
+            <li>子どもたちと泳ぎました。</li>
+            <li>砂でお城を作りました。</li>
+            <li>パラソルの下で本を読みました。</li>
+            <li>一人で海へ行きました。</li>
+        </ol>
+        <button class="show-answer" onclick="showAnswer(this, 'C')">答えを見る</button>
+        <div class="answer-text">正解: C. パラソルの下で本を読みました。<br>解説：「私はパラソルの下で本を読んでいました」と書いてあります。</div>
+    </div>
+
+    <div class="quiz-container">
+        <h3>問題 8</h3>
+        <p class="passage">
+            私の休日の楽しみは、ペットの犬と遊ぶことです。毎週末、広い公園へ連れて行って、ボールで遊びます。犬が楽しそうに走るのを見るのが、私にとって一番のいやしです。
+        </p>
+        <p class="question">この人にとって、一番のいやしは何ですか。</p>
+        <ol class="options" type="A">
+            <li>公園でボール遊びをすることです。</li>
+            <li>犬が楽しそうに走るのを見ることです。</li>
+            <li>毎週末、公園へ行くことです。</li>
+            <li>ペットの犬と家で休むことです。</li>
+        </ol>
+        <button class="show-answer" onclick="showAnswer(this, 'B')">答えを見る</button>
+        <div class="answer-text">正解: B. 犬が楽しそうに走るのを見ることです。<br>解説：「犬が楽しそうに走るのを見るのが、私にとって一番のいやしです。」と書いてあります。</div>
+    </div>
+
+    <div class="quiz-container">
+        <h3>問題 9</h3>
+        <p class="passage">
+            明日は久しぶりの休みです。でも、特に予定はありません。たぶん一日中、家でごろごろしていると思います。掃除もしないし、買い物にも行かないつもりです。たまには、何もしない日もいいと思います。
+        </p>
+        <p class="question">この人は明日何をしますか。</p>
+        <ol class="options" type="A">
+            <li>掃除をします。</li>
+            <li>買い物に行きます。</li>
+            <li>友だちに会います。</li>
+            <li>特に何もしません。</li>
+        </ol>
+        <button class="show-answer" onclick="showAnswer(this, 'D')">答えを見る</button>
+        <div class="answer-text">正解: D. 特に何もしません。<br>解説：「特に予定はありません。」「何もしない日もいいと思います。」と書いてあります。</div>
+    </div>
+
+    <div class="quiz-container">
+        <h3>問題 10</h3>
+        <p class="passage">
+            キムさんは最近、日本語の勉強をがんばっています。平日は仕事で忙しいので、休みの日にまとめて勉強します。土曜日は文法を復習して、日曜日は漢字の練習をするそうです。
+        </p>
+        <p class="question">キムさんは日曜日に何をしますか。</p>
+        <ol class="options" type="A">
+            <li>仕事をします。</li>
+            <li>文法の復習をします。</li>
+            <li>漢字の練習をします。</li>
+            <li>日本語の学校へ行きます。</li>
+        </ol>
+        <button class="show-answer" onclick="showAnswer(this, 'C')">答えを見る</button>
+        <div class="answer-text">正解: C. 漢字の練習をします。<br>解説：「日曜日は漢字の練習をするそうです。」と書いてあります。</div>
+    </div>
+
+    <script>
+        function showAnswer(button, correctAnswer) {
+            const container = button.parentElement;
+            const answerDiv = container.querySelector('.answer-text');
+            answerDiv.style.display = 'block';
+            button.style.display = 'none';
+
+            const options = container.querySelectorAll('.options li');
+            options.forEach((option, index) => {
+                // Alphabet: A=0, B=1, C=2, D=3
+                if (String.fromCharCode(65 + index) === correctAnswer) {
+                    option.style.backgroundColor = '#d4edda';
+                    option.style.borderColor = '#c3e6cb';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
