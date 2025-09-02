@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,11 +42,28 @@
             border: 1px solid #eee;
             border-radius: 5px;
         }
+        details {
+            margin-top: 15px;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            display: inline-block;
+            outline: none;
+        }
+        summary:hover {
+            background-color: #0056b3;
+        }
         .answer-section {
             margin-top: 15px;
             padding: 10px;
             background-color: #e9f7ef;
             border-left: 5px solid #28a745;
+            border-radius: 5px;
         }
         .answer-section strong {
             color: #155724;
@@ -54,7 +73,7 @@
 <body>
 
     <h1>日本語の比較表現クイズ</h1>
-    <p>「以上」「以下」「未満」などの表現の理解度を試すクイズです。</p>
+    <p>「以上」「以下」「未満」などの表現の理解度を試すクイズです。各問題のボタンを押すと答えと解説が表示されます。</p>
 
     <div class="quiz-container">
         <h2>問題 1</h2>
@@ -65,10 +84,13 @@
             <li>(3) 17歳と11ヶ月</li>
             <li>(4) 19歳未満</li>
         </ul>
-        <div class="answer-section">
-            <p><strong>答え: (2) 18歳</strong></p>
-            <p><strong>解説:</strong> 「以上」はその数字を含むため、18歳は条件に当てはまります。</p>
-        </div>
+        <details>
+            <summary>答えと解説を見る</summary>
+            <div class="answer-section">
+                <p><strong>答え: (2) 18歳</strong></p>
+                <p><strong>解説:</strong> 「以上」はその数字を含むため、18歳は条件に当てはまります。</p>
+            </div>
+        </details>
     </div>
 
     <div class="quiz-container">
@@ -80,10 +102,13 @@
             <li>(3) 51人</li>
             <li>(4) 不明</li>
         </ul>
-        <div class="answer-section">
-            <p><strong>答え: (2) 50人</strong></p>
-            <p><strong>解説:</strong> 「以下」はその数字を含むため、50人が最大乗車人数です。</p>
-        </div>
+        <details>
+            <summary>答えと解説を見る</summary>
+            <div class="answer-section">
+                <p><strong>答え: (2) 50人</strong></p>
+                <p><strong>解説:</strong> 「以下」はその数字を含むため、50人が最大乗車人数です。</p>
+            </div>
+        </details>
     </div>
 
     <div class="quiz-container">
@@ -95,10 +120,13 @@
             <li>(3) 5つ</li>
             <li>(4) 6つ</li>
         </ul>
-        <div class="answer-section">
-            <p><strong>答え: (2) 4つ</strong></p>
-            <p><strong>解説:</strong> 1, 2, 3, 4が「5未満の正の整数」にあたります。「未満」は5を含みません。</p>
-        </div>
+        <details>
+            <summary>答えと解説を見る</summary>
+            <div class="answer-section">
+                <p><strong>答え: (2) 4つ</strong></p>
+                <p><strong>解説:</strong> 1, 2, 3, 4が「5未満の正の整数」にあたります。「未満」は5を含みません。</p>
+            </div>
+        </details>
     </div>
 
     <div class="quiz-container">
@@ -110,10 +138,13 @@
             <li>(3) 100.1</li>
             <li>(4) 100以下</li>
         </ul>
-        <div class="answer-section">
-            <p><strong>答え: (3) 100.1</strong></p>
-            <p><strong>解説:</strong> 「より大きい」はその数字自身を含みません。100.1は100よりわずかに大きい数なので、条件に合致します。</p>
-        </div>
+        <details>
+            <summary>答えと解説を見る</summary>
+            <div class="answer-section">
+                <p><strong>答え: (3) 100.1</strong></p>
+                <p><strong>解説:</strong> 「より大きい」はその数字自身を含みません。100.1は100よりわずかに大きい数なので、条件に合致します。</p>
+            </div>
+        </details>
     </div>
 
     <div class="quiz-container">
@@ -125,10 +156,13 @@
             <li>(3) マイナス4度</li>
             <li>(4) マイナス3度</li>
         </ul>
-        <div class="answer-section">
-            <p><strong>答え: (3) マイナス4度</strong></p>
-            <p><strong>解説:</strong> 負の数では、絶対値が大きいほど実際の数は小さくなります。マイナス4度はマイナス3度より小さい（寒い）温度です。</p>
-        </div>
+        <details>
+            <summary>答えと解説を見る</summary>
+            <div class="answer-section">
+                <p><strong>答え: (3) マイナス4度</strong></p>
+                <p><strong>解説:</strong> 負の数では、絶対値が大きいほど実際の数は小さくなります。マイナス4度はマイナス3度より小さい（寒い）温度です。</p>
+            </div>
+        </details>
     </div>
 
     <div class="quiz-container">
@@ -140,10 +174,13 @@
             <li>(3) 80点</li>
             <li>(4) 80点未満</li>
         </ul>
-        <div class="answer-section">
-            <p><strong>答え: (3) 80点</strong></p>
-            <p><strong>解説:</strong> 「以上」は80点を含むため、合格です。</p>
-        </div>
+        <details>
+            <summary>答えと解説を見る</summary>
+            <div class="answer-section">
+                <p><strong>答え: (3) 80点</strong></p>
+                <p><strong>解説:</strong> 「以上」は80点を含むため、合格です。</p>
+            </div>
+        </details>
     </div>
 
     <div class="quiz-container">
@@ -155,10 +192,13 @@
             <li>(3) 1000円より高い商品</li>
             <li>(4) セール対象外の商品</li>
         </ul>
-        <div class="answer-section">
-            <p><strong>答え: (2) 999円の商品</strong></p>
-            <p><strong>解説:</strong> 「以下」は基準の数字（1000円）を含めた、それより小さい範囲を指します。999円は条件に当てはまります。</p>
-        </div>
+        <details>
+            <summary>答えと解説を見る</summary>
+            <div class="answer-section">
+                <p><strong>答え: (2) 999円の商品</strong></p>
+                <p><strong>解説:</strong> 「以下」は基準の数字（1000円）を含めた、それより小さい範囲を指します。999円は条件に当てはまります。</p>
+            </div>
+        </details>
     </div>
 
     <div class="quiz-container">
@@ -170,10 +210,13 @@
             <li>(3) 身長149.9cmの人</li>
             <li>(4) 身長151cmの人</li>
         </ul>
-        <div class="answer-section">
-            <p><strong>答え: (3) 身長149.9cmの人</strong></p>
-            <p><strong>解説:</strong> 「未満」は基準となる数字（150cm）を含まないため、150cmより少しでも低い身長の人が対象となります。</p>
-        </div>
+        <details>
+            <summary>答えと解説を見る</summary>
+            <div class="answer-section">
+                <p><strong>答え: (3) 身長149.9cmの人</strong></p>
+                <p><strong>解説:</strong> 「未満」は基準となる数字（150cm）を含まないため、150cmより少しでも低い身長の人が対象となります。</p>
+            </div>
+        </details>
     </div>
 
     <div class="quiz-container">
@@ -185,10 +228,13 @@
             <li>(3) 5個</li>
             <li>(4) 6個</li>
         </ul>
-        <div class="answer-section">
-            <p><strong>答え: (2) 4個</strong></p>
-            <p><strong>解説:</strong> 「2より大きい」ため2は含まず、「6以下」なので6は含みます。該当する整数は3, 4, 5, 6の4つです。</p>
-        </div>
+        <details>
+            <summary>答えと解説を見る</summary>
+            <div class="answer-section">
+                <p><strong>答え: (2) 4個</strong></p>
+                <p><strong>解説:</strong> 「2より大きい」ため2は含まず、「6以下」なので6は含みます。該当する整数は3, 4, 5, 6の4つです。</p>
+            </div>
+        </details>
     </div>
 
     <div class="quiz-container">
@@ -200,10 +246,13 @@
             <li>(3) 30分未満である</li>
             <li>(4) およそ30分である</li>
         </ul>
-        <div class="answer-section">
-            <p><strong>答え: (1) 30分を超えることはない</strong></p>
-            <p><strong>解説:</strong> 「30分以下」は、30分ちょうどの場合と、30分より短い場合の両方を含みます。つまり「30分を超えることはない」という意味になります。</p>
-        </div>
+        <details>
+            <summary>答えと解説を見る</summary>
+            <div class="answer-section">
+                <p><strong>答え: (1) 30分を超えることはない</strong></p>
+                <p><strong>解説:</strong> 「30分以下」は、30分ちょうどの場合と、30分より短い場合の両方を含みます。つまり「30分を超えることはない」という意味になります。</p>
+            </div>
+        </details>
     </div>
 
 </body>
