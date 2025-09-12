@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N4 読解練習問題 - 日本での生活</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', 'Arial', 'Hiragino Sans', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f8fa;
+        }
+        h1 {
+            text-align: center;
+            color: #00509e;
+            border-bottom: 3px solid #00509e;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #007bff;
+            border-left: 5px solid #007bff;
+            padding-left: 10px;
+        }
+        .question-block {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .passage {
+            background-color: #eef7ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-left: 5px solid #80c4ff;
+        }
+        .question-text {
+            font-weight: bold;
+            margin: 20px 0 15px 0;
+            color: #333;
+        }
+        ul.options {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul.options li {
+            margin-bottom: 10px;
+            padding: 12px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        ul.options li:hover {
+            background-color: #f0f8ff;
+        }
+        .answers-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+        #toggle-answers {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        #toggle-answers:hover {
+            background-color: #218838;
+        }
+        #answer-list {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        #answer-list h2 {
+           color: #dc3545;
+           border-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>N4 読解練習問題 - 日本での生活</h1>
+
+    <div class="question-block">
+        <h2>問題 1</h2>
+        <div class="passage">
+            <p><strong>アパートのお知らせ</strong><br>
+            ゴミは、決められた日の朝８時までに出してください。月曜日と木曜日は「燃えるゴミ」、水曜日は「びん・かん」の日です。プラスチックのゴミは金曜日に出してください。大きいゴミを捨てたいときは、市役所に電話して、予約しなければなりません。</p>
+        </div>
+        <p class="question-text">水曜日には、何を捨てることができますか。</p>
+        <ul class="options">
+            <li>1. 古い服や紙</li>
+            <li>2. ジュースのびんやかん</li>
+            <li>3. 大きいテーブル</li>
+            <li>4. お弁当のプラスチックの容器</li>
+        </ul>
+    </div>
+
+    <div class="question-block">
+        <h2>問題 2</h2>
+        <div class="passage">
+            <p>「まもなく、渋谷、渋谷です。お降りの方は、お忘れ物のないよう、ご注意ください。この電車は山手線内回り、品川・東京方面行きです。電車とホームの間が広く開いているところがありますので、足元にご注意ください。」</p>
+        </div>
+        <p class="question-text">アナウンスで、注意するように言っていることは何ですか。</p>
+        <ul class="options">
+            <li>1. 次の電車はすぐ来ること。</li>
+            <li>2. 電車に乗るときは急ぐこと。</li>
+            <li>3. 電車とホームの間が危ないこと。</li>
+            <li>4. 渋谷駅は出口が多いこと。</li>
+        </ul>
+    </div>
+
+    <div class="question-block">
+        <h2>問題 3</h2>
+        <div class="passage">
+            <p>A：「すみません、この荷物をアメリカに送りたいんですが。」<br>
+            B：「はい。船で送りますか、飛行機で送りますか。」<br>
+            A：「飛行機でお願いします。いくらですか。」<br>
+            B：「２５００円です。こちらの紙に、お名前と住所を書いてください。」</p>
+        </div>
+        <p class="question-text">Aさんは、郵便局で何をしなければなりませんか。</p>
+        <ul class="options">
+            <li>1. 荷物の重さをはかる。</li>
+            <li>2. 飛行機のチケットを買う。</li>
+            <li>3. 船の時間を調べる。</li>
+            <li>4. 紙に名前と住所を書く。</li>
+        </ul>
+    </div>
+    
+    <div class="question-block">
+        <h2>問題 4</h2>
+        <div class="passage">
+            <p>市の図書館で本を借りるためには、カードが必要です。カードを作るときは、運転免許証や在留カードなど、住所がわかるものを持ってきてください。カードがあれば、一度に１０冊まで、２週間借りることができます。返すときは、図書館が開いていなくても、入り口のポストに入れることができます。</p>
+        </div>
+        <p class="question-text">この図書館について、正しいものはどれですか。</p>
+        <ul class="options">
+            <li>1. 本は、何冊でも借りることができる。</li>
+            <li>2. カードがなくても、本を借りることができる。</li>
+            <li>3. 本は、図書館が閉まっていても返すことができる。</li>
+            <li>4. カードは、電話で作ることができる。</li>
+        </ul>
+    </div>
+
+    <div class="question-block">
+        <h2>問題 5</h2>
+        <div class="passage">
+            <p>「すみません、初めてなんですが。」<br>
+            「はい、では、まず健康保険証（けんこうほけんしょう）を見せてください。それから、この紙に、お名前や今日の体のぐあいなどを書いて、あちらの箱に入れてお待ちください。順番になったら、お名前をお呼びします。」</p>
+        </div>
+        <p class="question-text">病院に初めて来た人は、まず何をしますか。</p>
+        <ul class="options">
+            <li>1. 名前を呼ばれるのを待つ。</li>
+            <li>2. 健康保険証を受付の人に見せる。</li>
+            <li>3. 箱に紙を入れる。</li>
+            <li>4. 医者に体のぐあいを話す。</li>
+        </ul>
+    </div>
+    
+    <div class="question-block">
+        <h2>問題 6</h2>
+        <div class="passage">
+            <p>木村さんは、土曜日の夜に、恋人とレストランへ行く約束をしました。そのレストランは人気があるので、電話で予約することにしました。「もしもし、予約をお願いしたいのですが。明日の夜７時に、大人２名で、窓の近くの席はありますか。」</p>
+        </div>
+        <p class="question-text">木村さんは、どうしてレストランに電話しましたか。</p>
+        <ul class="options">
+            <li>1. レストランの場所を聞きたかったから。</li>
+            <li>2. 恋人と約束したかったから。</li>
+            <li>3. 行く前に席をとりたかったから。</li>
+            <li>4. レストランが人気がないから。</li>
+        </ul>
+    </div>
+    
+    <div class="question-block">
+        <h2>問題 7</h2>
+        <div class="passage">
+            <p><strong>外国人住民のための日本語教室</strong><br>
+            簡単な日常会話を勉強するクラスです。毎週水曜日の午前１０時から１２時まで、場所は市民センターです。参加したい人は、電話かメールで申し込んでください。お金はかかりません。</p>
+        </div>
+        <p class="question-text">この日本語教室について、正しいものはどれですか。</p>
+        <ul class="options">
+            <li>1. 教室は、水曜日の午後にある。</li>
+            <li>2. 参加するためには、お金が必要だ。</li>
+            <li>3. 難しいビジネス日本語を勉強する。</li>
+            <li>4. 参加したい人は、電話で申し込むことができる。</li>
+        </ul>
+    </div>
+
+    <div class="question-block">
+        <h2>問題 8</h2>
+        <div class="passage">
+            <p>日本で新しい携帯電話を買うとき、多くの人は２年間の契約をします。もし、２年より前に使うのをやめると、お金を払わなければならない場合があります。契約するときは、在留カードと銀行のキャッシュカードかクレジットカードが必要です。</p>
+        </div>
+        <p class="question-text">携帯電話を契約するとき、必要ではないものはどれですか。</p>
+        <ul class="options">
+            <li>1. 在留カード</li>
+            <li>2. パスポート</li>
+            <li>3. クレジットカード</li>
+            <li>4. 銀行のキャッシュカード</li>
+        </ul>
+    </div>
+
+    <div class="question-block">
+        <h2>問題 9</h2>
+        <div class="passage">
+            <p>A：「すみません、一番近い銀行はどこですか。」<br>
+            B：「この道をまっすぐ行って、二つ目の信号を右に曲がってください。そうすると、左側にコンビニが見えます。銀行はそのとなりです。」<br>
+            A：「ありがとうございます。」</p>
+        </div>
+        <p class="question-text">銀行はどこにありますか。</p>
+        <ul class="options">
+            <li>1. コンビニの右側です。</li>
+            <li>2. 一つ目の信号の角です。</li>
+            <li>3. コンビニの隣です。</li>
+            <li>4. コンビニの向かい側です。</li>
+        </ul>
+    </div>
+
+    <div class="question-block">
+        <h2>問題 10</h2>
+        <div class="passage">
+            <p>地震が起きたら、まず落ち着いてください。丈夫なテーブルや机の下に入って、頭を守りましょう。揺れがおさまったら、窓から離れて、火を消してください。外に逃げるときは、エレベーターを使わないで、階段を使いましょう。</p>
+        </div>
+        <p class="question-text">地震のとき、してはいけないことは何ですか。</p>
+        <ul class="options">
+            <li>1. 机の下に入ること。</li>
+            <li>2. 階段を使って逃げること。</li>
+            <li>3. エレベーターで下に降りること。</li>
+            <li>4. 揺れがおさまってから火を消すこと。</li>
+        </ul>
+    </div>
+
+    <div class="answers-section">
+        <button id="toggle-answers">答えを見る</button>
+        <div id="answer-list">
+            <h2>解答</h2>
+            <ol>
+                <li><strong>問題 1:</strong> 2. ジュースのびんやかん</li>
+                <li><strong>問題 2:</strong> 3. 電車とホームの間が危ないこと。</li>
+                <li><strong>問題 3:</strong> 4. 紙に名前と住所を書く。</li>
+                <li><strong>問題 4:</strong> 3. 本は、図書館が閉まっていても返すことができる。</li>
+                <li><strong>問題 5:</strong> 2. 健康保険証を受付の人に見せる。</li>
+                <li><strong>問題 6:</strong> 3. 行く前に席をとりたかったから。</li>
+                <li><strong>問題 7:</strong> 4. 参加したい人は、電話で申し込むことができる。</li>
+                <li><strong>問題 8:</strong> 2. パスポート</li>
+                <li><strong>問題 9:</strong> 3. コンビニの隣です。</li>
+                <li><strong>問題 10:</strong> 3. エレベーターで下に降りること。</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('toggle-answers').addEventListener('click', function() {
+            var answers = document.getElementById('answer-list');
+            if (answers.style.display === 'none' || answers.style.display === '') {
+                answers.style.display = 'block';
+                this.textContent = '答えをかくす';
+            } else {
+                answers.style.display = 'none';
+                this.textContent = '答えを見る';
+            }
+        });
+    </script>
+
+</body>
+</html>
